@@ -8,7 +8,7 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
-    - run: ruby scraper.rb
+    - run: bundle exec ruby scraper.rb
     - name: Commit dagens deal
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
