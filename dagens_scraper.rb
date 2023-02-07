@@ -1,17 +1,23 @@
 #! /usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'date'
+require 'json'
 require 'nokogiri'
 require 'open-uri'
-require 'date'
 
+filePath = './_data/dagens.json'
+data = JSON.parse(File.read(filePath))
 doc = Nokogiri::HTML(URI.open('https://www.vpg.no/tilbud/dagens'))
 
 doc.css('table tbody tr td div h2').each do |span|
   dagens = span.text
   puts dagens
-  File.open('dagens.txt', 'a') do |f|
-    f.write(Time.now.strftime('%Y.%m.%d - '))
-    f.puts(dagens)
+
+  date = Time.now.strftime('%Y.%m.%d')
+  data[date] = dagens
+
+  File.open(filePath, 'w') do |file|
+    JSON.dump(data, file)
   end
 end
