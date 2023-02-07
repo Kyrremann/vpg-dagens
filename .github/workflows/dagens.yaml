@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 7 * * *'
 
@@ -6,7 +7,7 @@ jobs:
   dagens:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
@@ -22,4 +23,6 @@ jobs:
         git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
         git checkout main
         git add dagens.txt
-        git diff --quiet && git diff --staged --quiet || (git commit -m "$COMMIT_MSG"; git push origin main)
+        git diff
+        git commit -m "$COMMIT_MSG"
+        git push origin main
