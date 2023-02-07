@@ -7,7 +7,7 @@ require 'date'
 
 doc = Nokogiri::HTML(URI.open('https://www.vpg.no/tilbud/dagens'))
 
-doc.css('table tbody tr td div h2 span').each do |span|
+doc.css('table tbody tr td div h2').each do |span|
   dagens = span.text
   puts dagens
   File.open('dagens.txt', 'a') do |f|
