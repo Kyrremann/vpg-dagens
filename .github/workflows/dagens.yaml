@@ -22,7 +22,7 @@ jobs:
         git config user.name github-actions
         git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
         git checkout main
-        git add dagens.txt
+        git add _data/
         git diff
         git commit -m "$COMMIT_MSG"
         git push origin main
