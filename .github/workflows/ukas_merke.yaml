@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '6 6 * * 2'
+    - cron: '7 7 * * 2'
 
 jobs:
   ukas_merke:
