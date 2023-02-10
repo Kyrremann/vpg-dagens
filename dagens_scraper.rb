@@ -18,6 +18,6 @@ doc.css('table tbody tr td div h2').each do |span|
   data[date] = dagens
 
   File.open(filePath, 'w') do |file|
-    JSON.dump(data, file)
+    file.write(JSON.pretty_generate(data))
   end
 end

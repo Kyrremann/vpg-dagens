@@ -17,5 +17,5 @@ date = Time.now.strftime('%Y.%m.%d')
 data[date] = ukas_merke
 
 File.open(filePath, 'w') do |file|
-  JSON.dump(data, file)
+  file.write(JSON.pretty_generate(data))
 end
