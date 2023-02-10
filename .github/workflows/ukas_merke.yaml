@@ -12,7 +12,7 @@ jobs:
       with:
         bundler-cache: true
     - run: bundle exec ruby ukas_merke_scraper.rb
-    - run: echo "UKAS_MERKE=$(tail -n 1 ukas_merke.txt | cut -f2- -d-)" >> $GITHUB_ENV
+    - run: echo "UKAS_MERKE=$(tail -n 1 _data/ukas_merke.json | cut -f2- -d-)" >> $GITHUB_ENV
     - name: Commit ukas merke
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
