@@ -1,3 +1,5 @@
+name: Ukas merke scraper
+
 on:
   workflow_dispatch:
   schedule:
