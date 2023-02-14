@@ -14,7 +14,7 @@ jobs:
       with:
         bundler-cache: true
     - run: bundle exec ruby dagens_scraper.rb
-    - run: echo "DAGENS_DEAL=$(tail -n 1 _data/dagens.json | cut -f2- -d-)" >> $GITHUB_ENV
+    - run: echo "DAGENS_DEAL=$(tail -2 _data/dagens.json | head -1 | cut -f2- -d":")" >> $GITHUB_ENV
     - name: Commit dagens deal
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
