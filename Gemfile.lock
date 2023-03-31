@@ -18,7 +18,7 @@ GEM
       uri
     racc (1.6.2)
     stringio (3.0.5)
-    time (0.2.1)
+    time (0.2.2)
       date
     uri (0.12.1)
 
