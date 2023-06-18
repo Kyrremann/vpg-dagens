@@ -2,8 +2,6 @@ name: Dagens scraper
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 7 * * *'
 
 jobs:
   dagens:
