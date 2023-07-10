@@ -3,20 +3,20 @@ GEM
   specs:
     date (3.3.3)
     mini_portile2 (2.8.2)
-    nokogiri (1.15.2)
+    nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.15.2-arm64-darwin)
+    nokogiri (1.15.3-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.2-x86_64-darwin)
+    nokogiri (1.15.3-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.2-x86_64-linux)
+    nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
     open-uri (0.3.0)
       stringio
       time
       uri
-    racc (1.6.2)
+    racc (1.7.1)
     stringio (3.0.5)
     time (0.2.2)
       date
