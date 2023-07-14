@@ -20,7 +20,7 @@ GEM
     stringio (3.0.5)
     time (0.2.2)
       date
-    uri (0.12.1)
+    uri (0.12.2)
 
 PLATFORMS
   arm64-darwin-22
